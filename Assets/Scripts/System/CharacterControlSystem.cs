@@ -36,6 +36,7 @@ public class CharacterControlSystem : IUpdateSystem, IGameSystem
 
     public void OnUpdate(float deltaTime)
     {
+        // 方向決定
         var velocity = Vector3.zero;
 		velocity = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
         velocity = Vector3.Lerp(oldVelocity, velocity, rotateSpeed * Time.deltaTime);
@@ -44,9 +45,8 @@ public class CharacterControlSystem : IUpdateSystem, IGameSystem
 			mainCharacter.transform.LookAt(mainCharacter.transform.position + velocity);
 		} 
 
-        // 視点を合わせる
+        // 視点をキャラに追従
         mainCamera.transform.position = mainCharacter.transform.position + Vector3.up * 4.3f + Vector3.back * 5.25f;
-        // mainCamera.transform.rotation = mainCharacter.transform.rotation;
         mainCharacter.transform.position = mainCharacter.transform.position + velocity * deltaTime * moveSpeed;
     }
 
