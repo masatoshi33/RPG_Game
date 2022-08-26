@@ -22234,6 +22234,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2985503105378147168, guid: 3ed014b3017b547779c2d8bc3d523be2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d88fde6cc842a4c9a99af4c4036a07c8, type: 2}
     - target: {fileID: 6981349689002780663, guid: 3ed014b3017b547779c2d8bc3d523be2, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -22310,3 +22314,9 @@ MonoBehaviour:
   direction: 0
   speed: 1
   targetPosition: {fileID: 0}
+  animator: {fileID: 2985503106569929350}
+--- !u!95 &2985503106569929350 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2985503105378147168, guid: 3ed014b3017b547779c2d8bc3d523be2, type: 3}
+  m_PrefabInstance: {fileID: 2985503106569929346}
+  m_PrefabAsset: {fileID: 0}

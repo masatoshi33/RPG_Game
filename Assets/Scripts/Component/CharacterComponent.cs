@@ -16,4 +16,5 @@ public class CharacterComponent : MonoBehaviour
     public Direction direction;
     public float speed;
     public Transform targetPosition;
+    public Animator animator;
 }

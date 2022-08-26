@@ -39,9 +39,14 @@ public class CharacterControlSystem : IUpdateSystem, IGameSystem
         // 方向決定
         var velocity = Vector3.zero;
 		velocity = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
-        velocity = Vector3.Lerp(oldVelocity, velocity, rotateSpeed * Time.deltaTime);
-        oldVelocity = velocity;
         if(velocity.magnitude > 0f){
+            mainCharacter.animator.SetBool("IsWalking", true);
+		} 
+        else mainCharacter.animator.SetBool("IsWalking", false);
+
+        velocity = Vector3.Slerp(oldVelocity, velocity, rotateSpeed * Time.deltaTime);
+        oldVelocity = velocity;
+        if(velocity.magnitude > 0.1f){
 			mainCharacter.transform.LookAt(mainCharacter.transform.position + velocity);
 		} 
 
