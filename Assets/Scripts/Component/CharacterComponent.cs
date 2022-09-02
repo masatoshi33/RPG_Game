@@ -17,4 +17,5 @@ public class CharacterComponent : MonoBehaviour
     public float speed;
     public Transform targetPosition;
     public Animator animator;
+    public Rigidbody rigidbody;
 }

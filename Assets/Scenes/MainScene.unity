@@ -22315,8 +22315,39 @@ MonoBehaviour:
   speed: 1
   targetPosition: {fileID: 0}
   animator: {fileID: 2985503106569929350}
+  rigidbody: {fileID: 2985503106569929352}
 --- !u!95 &2985503106569929350 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2985503105378147168, guid: 3ed014b3017b547779c2d8bc3d523be2, type: 3}
   m_PrefabInstance: {fileID: 2985503106569929346}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &2985503106569929351
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2985503106569929347}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.21356337
+  m_Height: 1.883602
+  m_Direction: 1
+  m_Center: {x: -0.0001667738, y: 0.9170365, z: 0}
+--- !u!54 &2985503106569929352
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2985503106569929347}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 20
+  m_AngularDrag: 100
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
